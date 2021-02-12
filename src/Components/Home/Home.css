@@ -1,0 +1,41 @@
+.home-container{
+   
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    margin:auto;
+    
+      padding-left: 65px;
+      padding-right: 65px;
+    z-index:1;
+}
+
+.home-row{
+display:flex;
+align-items: center;
+flex-wrap: wrap;
+ justify-content: space-around;  
+}
+.home-col{
+    flex-basis: 50%;
+    min-width:300px;
+}
+.home-col img{
+    max-width: 100%;
+}
+
+.info p{
+    font-size: 20px;
+}
+.info h1{
+    font-size: 35px;
+}
+.btn{
+    padding:15px 20px;
+    background-color: rgb(165, 112, 42);
+    width:25%;
+    margin:10px 0;
+    font-size: 15px;
+    color:white;
+    border-radius: 30px;
+}
