@@ -1,5 +1,10 @@
+.ship-container{
+    text-align: center;
+    margin:10px 490px;
+}
 .ship-form{
-    margin:30px 100px;
+   
+    
 }
 .ship-form input {
     display: block;

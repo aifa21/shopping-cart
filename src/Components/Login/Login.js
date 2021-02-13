@@ -248,12 +248,7 @@ function Login() {
           <br />
           <br />
         </form>
-        <p style={{ color: "red" }}>{user.error}</p>
-        {user.success && (
-          <p style={{ color: "green" }}>
-            User {newUser ? "Created" : "Logged in"} Successfully
-          </p>
-        )}
+       
 
         <p style={{ textAlign: "center" }}>
           {newUser ? "Already have an account ? " : "Don't have account ?"}
@@ -281,10 +276,16 @@ function Login() {
         </div>
         <br />
       </div>
+      
       </div>
      
-      <br />
-      <br />
+      <p style={{ color: "red" }}>{user.error}</p>
+        {user.success && (
+          <p style={{ color: "green" }}>
+            User {newUser ? "Created" : "Logged in"} Successfully
+          </p>
+        )}
+     
 
       
     </div>

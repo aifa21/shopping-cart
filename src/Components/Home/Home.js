@@ -3,6 +3,7 @@ import React from "react";
 import b1 from "../../images/banner_01.png";
 import b2 from "../../images/banner_02.png";
 import b3 from "../../images/collection_01.png";
+import Footer from "../Footer/Footer";
 import  './Home.css';
 const Home = () => {
   return (
@@ -18,7 +19,9 @@ const Home = () => {
           <img src={b1} alt="" />
         </div>
       </div>
+      <Footer></Footer>
     </div>
+   
   );
 };
 

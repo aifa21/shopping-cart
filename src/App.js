@@ -17,6 +17,7 @@ import NotFound from "./Components/NotFound/NotFound";
 import ProductDetail from "./Components/ProductDetail/ProductDetail";
 import Login from "./Components/Login/Login";
 import Shipment from "./Components/Shipment/Shipment";
+import Footer from "./Components/Footer/Footer";
 import { createContext } from "react";
 import { useState } from "react";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
@@ -56,6 +57,9 @@ function App() {
           </PrivateRoute>
           <Route path="/product/:productKey">
             <ProductDetail></ProductDetail>
+          </Route>
+          <Route path="/contact">
+            <Footer></Footer>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

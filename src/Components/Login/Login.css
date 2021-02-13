@@ -7,6 +7,7 @@
 	padding: 15px;
 	background: rgb(255, 255, 255);
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+	position:relative;
 }
 .login-container h4{
 	background: orangered;
@@ -89,6 +90,7 @@
 }
 .social{
 	margin-top: 20px;
+	
 }
 .google{
 	
