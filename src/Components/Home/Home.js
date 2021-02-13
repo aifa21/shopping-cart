@@ -11,7 +11,7 @@ const Home = () => {
         <div className="home-col col-info">
           <h1>New inspiration<br/>
           Phones made for u</h1>
-          <p className="my-3">Check out latest deals on cell phone</p>
+          <p className="my-3git init">Check out latest deals on cell phone</p>
           <button class="shop-btn"> Shop now</button>
         </div>
         <div className="home-col col-image">
