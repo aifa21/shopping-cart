@@ -19,7 +19,7 @@ const Header = () => {
                 
                 <Nav className="ml-auto px-5 d-flex align-items-cente">
                    <li> <Link   to="/home">Home</Link></li>
-                   <li> <Link  to="/products">Products</Link></li>
+                   <li> <Link  to="/shop">Products</Link></li>
                     <li><Link   to="/review">Review</Link></li>
                    <li> <Link   to="/contact">Contact</Link></li>
                    <li><Link   to="/login"><FontAwesomeIcon icon={faUser} /></Link></li>
