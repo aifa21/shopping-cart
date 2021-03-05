@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import fakeData from "../fakeData";
+
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 
@@ -11,20 +11,29 @@ import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { addToDatabaseCart, getDatabaseCart } from "../../utilities/databaseManager";
 const Shop = () => {
-  const first10 = fakeData.slice(0, 10);
-  const [products, setProducts] = useState(first10);
+  const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-
+ 
+  useEffect(()=>{
+    fetch('https://whispering-island-36789.herokuapp.com/products')
+    .then(res=>res.json())
+    .then(data=>setProducts(data))
+  },[])
   useEffect(()=>{
     const saveCart=getDatabaseCart();//saveCart[key]=quantity//lemon[A]=2
     const productKeys=Object.keys(saveCart);
-    const previousCart=productKeys.map(pKeys=>{
-      const product=fakeData.find(fk=>fk.key===pKeys);
-      product.quantity=saveCart[pKeys];
-      return product;
+    fetch('https://whispering-island-36789.herokuapp.com/productsByKeys',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+    },
+    body:JSON.stringify(productKeys)
     })
-    setCart(previousCart);
-  },[])
+    .then(res=>res.json())
+    .then(data=>setCart(data))
+    
+  }, []);
+
   const handleProduct = (product) => {
     const keyAdded=product.key;
     const sameProduct=cart.find(pd=>pd.key===keyAdded);

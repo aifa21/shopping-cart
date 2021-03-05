@@ -9,7 +9,14 @@
       padding-right: 65px;
     z-index:1;
 }
-
+.home-col h1{
+    font-size: 50px;
+    line-height: 6rem;
+}
+.home-col p{
+   color:gray;
+   font-size: 15px;
+}
 .home-row{
 display:flex;
 align-items: center;
@@ -18,7 +25,7 @@ flex-wrap: wrap;
 }
 .home-col{
     flex-basis: 50%;
-    min-width:300px;
+    min-width:290px;
 }
 .home-col img{
     max-width: 100%;
@@ -34,7 +41,7 @@ flex-wrap: wrap;
     padding:15px 20px;
     background-color: rgb(165, 112, 42);
     width:25%;
-    margin:10px 0;
+    margin:15px 0;
     font-size: 15px;
     color:white;
     border-radius: 30px;

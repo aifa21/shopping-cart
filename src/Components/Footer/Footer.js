@@ -5,12 +5,14 @@ const Footer = () => {
   return (
     <main className="contact-container ">
       <div className="foot-container ">
+      <h1 className="title" style={{"textAlign":"center","marginTop":"70px"}}>Newsletter</h1>
         <div className="row d-flex align-items-center">
+       
           <div className=" col-md-4 offset-md-1">
-            <h2 style={{ color: "brown" }}>
-              Let's handle your <br /> project professionally.
+            <h2 style={{ color: "brown" ,marginBottom:"18px"}}>
+              Let's handle your project <br />  professionally.
             </h2>
-            <p style={{ color: "black" }}>
+            <p style={{ color: "gray",letterSpacing:".1rem" }}>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
               eveniet necessitatibus corrupti minima.
             </p>

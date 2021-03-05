@@ -21,6 +21,7 @@ const Header = () => {
                    <li> <Link   to="/home">Home</Link></li>
                    <li> <Link  to="/shop">Products</Link></li>
                     <li><Link   to="/review">Review</Link></li>
+                    <li><Link   to="/inventory">Manage Inventory</Link></li>
                    <li> <Link   to="/contact">Contact</Link></li>
                    <li><Link   to="/login"><FontAwesomeIcon icon={faUser} /></Link></li>
                     <li><Link   to="/review"><FontAwesomeIcon icon={faCartPlus} /></Link></li>

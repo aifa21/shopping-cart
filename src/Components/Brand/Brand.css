@@ -1,0 +1,30 @@
+#brand{
+    max-height: 200px;
+    margin-top:80px;
+    margin-bottom: 50px;
+   
+   
+}
+#brand .brand-slider img{
+    height:100px;
+    width:150px;
+    margin:5rem auto;
+}
+#brand .brand-slider .item{
+    margin:20px 55px;
+}
+@media (max-width: 655px){
+  #brand{
+    max-height: 800px;
+   text-align: center;
+  }
+  #brand .brand-slider img{
+    height:150px;
+    width:200px;
+    margin:50px auto;
+}
+#brand .item{
+    margin-top: 30px;
+}
+
+}

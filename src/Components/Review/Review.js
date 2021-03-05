@@ -7,7 +7,6 @@ import {
 import Cart from "../Cart/Cart";
 import fakeData from "../fakeData";
 import ReviewItem from "../ReviewItem/ReviewItem";
-
 import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSmile} from '@fortawesome/free-solid-svg-icons'
@@ -24,21 +23,23 @@ const Review = () => {
   };
   const handleRemove = (productKey) => {
     const newCart = cart.filter((pd) => pd.key !== productKey);
-    removeFromDatabaseCart(productKey);
-
     setCart(newCart);
+    removeFromDatabaseCart(productKey);
   };
   useEffect(() => {
     const saveCart = getDatabaseCart(); //saveCart[key]=quantity like saveCart[bfrhbr]=3
     const productKeys = Object.keys(saveCart);
-    // const counts=productKeys.map(key=>saveCart[key]);
-    const cartProduct = productKeys.map((key) => {
-      const product = fakeData.find((pd) => pd.key === key);
-      product.quantity = saveCart[key];
-      // console.log(product);
-      return product;
-    });
-    setCart(cartProduct);
+
+    fetch('https://whispering-island-36789.herokuapp.com/productsByKeys',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+    },
+    body:JSON.stringify(productKeys)
+    })
+    .then(res=>res.json())
+    .then(data=>setCart(data))
+    
   }, []);
 
   return (
@@ -47,7 +48,11 @@ const Review = () => {
         <h2 className="title">Review Products</h2>
         {
         cart.map((pd) => (
-          <ReviewItem product={pd} handleRemove={handleRemove}></ReviewItem>
+          <ReviewItem 
+          key={pd.key} 
+          product={pd} 
+          handleRemove={handleRemove}>
+          </ReviewItem>
         ))
         }
         {
