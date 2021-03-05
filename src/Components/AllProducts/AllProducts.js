@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Android from '../Android/Android';
 import Camera from '../Camera/Camera';
 import Laptop from '../Laptop/Laptop';
 import fakeData from '../fakeData';
 import './AllProduct.css';
 const AllProducts = () => {
-    const [allProduct,setAllProduct]=useState([]);
-    useEffect(()=>{
-        fetch('https://whispering-island-36789.herokuapp.com/products')
-        .then(res=>res.json())
-        .then(data=>setAllProduct(data))
-      },[])
+    const [allProduct,setAllProduct]=useState(fakeData);
+    
     const android=allProduct.filter(ap=>ap.category==='android');
     const android1=android.slice(0,6);
     const camera=allProduct.filter(cm=>cm.category==='camera');
