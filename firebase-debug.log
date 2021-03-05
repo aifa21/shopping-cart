@@ -1,0 +1,74 @@
+[debug] [2021-03-05T15:43:26.992Z] ----------------------------------------------------------------------
+[debug] [2021-03-05T15:43:27.000Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-03-05T15:43:27.001Z] CLI Version:   9.4.0
+[debug] [2021-03-05T15:43:27.001Z] Platform:      win32
+[debug] [2021-03-05T15:43:27.002Z] Node Version:  v12.18.1
+[debug] [2021-03-05T15:43:27.005Z] Time:          Fri Mar 05 2021 21:43:27 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-03-05T15:43:27.005Z] ----------------------------------------------------------------------
+[debug] [2021-03-05T15:43:27.006Z] 
+[debug] [2021-03-05T15:43:27.066Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-05T15:43:27.067Z] > authorizing via signed-in user
+[debug] [2021-03-05T15:43:27.067Z] [iam] checking project shopping-cart-9f8e4 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-05T15:43:27.071Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-05T15:43:27.072Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-05T15:43:27.577Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Fri, 05 Mar 2021 15:43:27 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-05T15:43:27.657Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/shopping-cart-9f8e4:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-03-05T15:43:29.041Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 05 Mar 2021 15:43:28 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1013","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-05T15:43:29.043Z] > refreshing access token with scopes: []
+[debug] [2021-03-05T15:43:29.044Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-05T15:43:29.397Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Fri, 05 Mar 2021 15:43:29 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-05T15:43:29.458Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shopping-cart-9f8e4 [none]
+[debug] [2021-03-05T15:43:30.041Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shopping-cart-9f8e4 200
+[debug] [2021-03-05T15:43:30.042Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shopping-cart-9f8e4 {"projectId":"shopping-cart-9f8e4","projectNumber":"227030653674","displayName":"shopping-cart","name":"projects/shopping-cart-9f8e4","resources":{"hostingSite":"shopping-cart-9f8e4"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'shopping-cart-9f8e4'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-03-05T15:43:30.052Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-05T15:43:30.052Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-05T15:43:30.401Z] <<< HTTP RESPONSE 200 {"date":"Fri, 05 Mar 2021 15:43:30 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-05T15:43:30.436Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/shopping-cart-9f8e4/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-03-05T15:43:42.118Z] Error: getaddrinfo ENOTFOUND firebasehosting.googleapis.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)
+[error] 
+[error] Error: Server Error. getaddrinfo ENOTFOUND firebasehosting.googleapis.com
+[debug] [2021-03-05T16:05:16.060Z] ----------------------------------------------------------------------
+[debug] [2021-03-05T16:05:16.063Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-03-05T16:05:16.064Z] CLI Version:   9.4.0
+[debug] [2021-03-05T16:05:16.064Z] Platform:      win32
+[debug] [2021-03-05T16:05:16.064Z] Node Version:  v12.18.1
+[debug] [2021-03-05T16:05:16.065Z] Time:          Fri Mar 05 2021 22:05:16 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-03-05T16:05:16.065Z] ----------------------------------------------------------------------
+[debug] [2021-03-05T16:05:16.066Z] 
+[debug] [2021-03-05T16:05:16.075Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-05T16:05:16.075Z] > authorizing via signed-in user
+[debug] [2021-03-05T16:05:16.076Z] [iam] checking project shopping-cart-9f8e4 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-05T16:05:16.079Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/shopping-cart-9f8e4:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-03-05T16:05:18.820Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 05 Mar 2021 16:05:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1159","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-05T16:05:18.822Z] > refreshing access token with scopes: []
+[debug] [2021-03-05T16:05:18.822Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-05T16:05:19.217Z] <<< HTTP RESPONSE 200 {"date":"Fri, 05 Mar 2021 16:05:18 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-05T16:05:19.251Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/shopping-cart-9f8e4 [none]
+[debug] [2021-03-05T16:05:19.845Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/shopping-cart-9f8e4 200
+[debug] [2021-03-05T16:05:19.846Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/shopping-cart-9f8e4 {"projectId":"shopping-cart-9f8e4","projectNumber":"227030653674","displayName":"shopping-cart","name":"projects/shopping-cart-9f8e4","resources":{"hostingSite":"shopping-cart-9f8e4"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'shopping-cart-9f8e4'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-03-05T16:05:19.888Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-05T16:05:19.889Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-05T16:05:20.234Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Fri, 05 Mar 2021 16:05:19 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-05T16:05:20.319Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/shopping-cart-9f8e4/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-03-05T16:05:32.030Z] Error: getaddrinfo ENOTFOUND firebasehosting.googleapis.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:26)
+[error] 
+[error] Error: Server Error. getaddrinfo ENOTFOUND firebasehosting.googleapis.com
