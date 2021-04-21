@@ -15,12 +15,8 @@ const Review = () => {
   const [cart, setCart] = useState([]);
   const [place, setPlace] = useState(false);
   const history =useHistory();
-  const handlePlaceOrder = () => {
-    history.push('/shipment');
-    // setCart([]);
-    // setPlace(true);
-    // processOrder();
-  };
+  document.title="Review";
+  
   const handleRemove = (productKey) => {
     const newCart = cart.filter((pd) => pd.key !== productKey);
     setCart(newCart);
@@ -41,7 +37,12 @@ const Review = () => {
     .then(data=>setCart(data))
     
   }, []);
-
+  const handlePlaceOrder = () => {
+    history.push('/shipment');
+    // setCart([]);
+    // setPlace(true);
+    // processOrder();
+  };
   return (
     <div className="main-container">
       <div className="shop-container">

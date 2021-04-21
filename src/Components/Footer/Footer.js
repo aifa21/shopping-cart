@@ -2,6 +2,7 @@ import React from "react";
 import { Form } from "react-bootstrap";
 import "./Footer.css";
 const Footer = () => {
+  document.title="Contact";
   return (
     <main className="contact-container ">
       <div className="foot-container ">

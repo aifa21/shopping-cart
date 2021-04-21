@@ -10,6 +10,7 @@ import logo1 from '../../images/logo1.jpg';
 import { UserContext } from "../../App";
 const Header = () => {
   const [loggedInUser,setLoggedInUser]=useContext(UserContext);
+  console.log("name",loggedInUser.displayName);
   return (
     <div>
     <Container>
@@ -17,13 +18,32 @@ const Header = () => {
             <img className="logo1" src={logo1}  alt="" />
            
                 
-                <Nav className="ml-auto px-5 d-flex align-items-cente">
+                <Nav className="ml-auto px-5 d-flex align-items-centeR">
                    <li> <Link   to="/home">Home</Link></li>
                    <li> <Link  to="/shop">Products</Link></li>
                     <li><Link   to="/review">Review</Link></li>
+                    <li><Link   to="/shipment">Shipment</Link></li>
+                  
                     <li><Link   to="/inventory">Manage Inventory</Link></li>
                    <li> <Link   to="/contact">Contact</Link></li>
-                   <li><Link   to="/login"><FontAwesomeIcon icon={faUser} /></Link></li>
+                  {
+                    loggedInUser.email?
+                    <>
+                       <li><Link   to="/login">{loggedInUser.displayName}</Link></li>
+                       <li>
+              <Link to="/" >
+                <button style={{background:"yellow",fontSize:"18px",fontWeight:"600"}}
+                  onClick={() => setLoggedInUser({})}
+                  className="btn btn-rounded"
+                >
+                  Sign Out
+                </button>
+              </Link>
+            </li>
+                    </>
+                    :
+                    <li><Link   to="/login"><FontAwesomeIcon icon={faUser} /></Link></li>
+                  }
                     <li><Link   to="/review"><FontAwesomeIcon icon={faCartPlus} /></Link></li>
                     
                     

@@ -8,7 +8,7 @@ import { faStar,faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 const Product = (props) => {
     const {name,img,price,key} =props.product;
     // cost[category,setCategory]=useContext();
-
+    document.title="Products";
     return (
        
         <div className="product-container">

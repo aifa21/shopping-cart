@@ -9,6 +9,8 @@ const AllProducts = () => {
     useEffect(()=>{
         fetch('https://whispering-island-36789.herokuapp.com/products')
         .then(res=>res.json())
+        
+        
         .then(data=>setAllProduct(data))
       },[])
     const android=allProduct.filter(ap=>ap.category==='android');

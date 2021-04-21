@@ -10,15 +10,17 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { addToDatabaseCart, getDatabaseCart } from "../../utilities/databaseManager";
+import { Spinner } from "react-bootstrap";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [search, setSearch] = useState('');
  
   useEffect(()=>{
-    fetch('https://whispering-island-36789.herokuapp.com/products')
+    fetch('https://whispering-island-36789.herokuapp.com/products?search='+search)
     .then(res=>res.json())
     .then(data=>setProducts(data))
-  },[])
+  },[search])
   useEffect(()=>{
     const saveCart=getDatabaseCart();//saveCart[key]=quantity//lemon[A]=2
     const productKeys=Object.keys(saveCart);
@@ -34,6 +36,9 @@ const Shop = () => {
     
   }, []);
 
+  const handleSearch = event =>{
+    setSearch(event.target.value);
+}
   const handleProduct = (product) => {
     const keyAdded=product.key;
     const sameProduct=cart.find(pd=>pd.key===keyAdded);
@@ -58,7 +63,11 @@ const Shop = () => {
   return (
     <div className="main-container">
       <div className="shop-container">
+      <input type="text" onBlur={handleSearch} placeholder="search product"/>
         <h2 className="title">Featured Products</h2>
+        {
+          products.length==0&&<Spinner animation="border" />
+        }
         {products.map((pd) => (
           <Product
             key={pd.key}

@@ -9,6 +9,7 @@ import Brand from "../Brand/Brand";
 import Footer from "../Footer/Footer";
 import  './Home.css';
 const Home = () => {
+  document.title="Home";
   return (
     <div className="home-container">
       <div className="home-row">

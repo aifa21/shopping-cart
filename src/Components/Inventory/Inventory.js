@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Inventory = () => {
+    document.title="Inventory";
     const handleProduct=()=>{
         const product={};
         fetch('https://whispering-island-36789.herokuapp.com/addProduct',{

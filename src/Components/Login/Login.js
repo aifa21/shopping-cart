@@ -23,7 +23,7 @@ function Login() {
   const [newUser, setNewUser] = useState(false);
   const history = useHistory();
   const location = useLocation();
-
+ 
   let { from } = location.state || { from: { pathname: "/" } }; //login theke shipment page e niye jabe
   const googleProvider = new firebase.auth.GoogleAuthProvider();
   const fbProvider = new firebase.auth.FacebookAuthProvider();
@@ -32,23 +32,34 @@ function Login() {
       .auth()
       .signInWithPopup(googleProvider)
       .then((res) => {
+        var token = res.credential.accessToken;
+        console.log("res=",res);
         const { displayName, photoURL, email } = res.user;
         const isSignedInUser = {
           isSignedIn: true,
           name: displayName,
           email: email,
           photo: photoURL,
+          success: true
         };
+        
         setUser(isSignedInUser);
         history.replace(from);
-        console.log(displayName, photoURL, email);
+        setUserToken();
+        console.log("info=",displayName, photoURL, email);
       })
       .catch((err) => {
         console.log(err);
         console.log(err.message);
       });
   };
-
+const setUserToken=()=>{
+  firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+    sessionStorage.setItem('token',idToken);
+  }).catch(function(error) {
+    // Handle error
+  });
+}
   const fbSignIn = () => {
     firebase
       .auth()
@@ -78,6 +89,7 @@ function Login() {
       });
   };
   const handleSignedOut = () => {
+    localStorage.setItem('user', JSON.stringify({email:'',displayName:''}))
     firebase
       .auth()
       .signOut()
@@ -91,10 +103,11 @@ function Login() {
           success: false,
         };
         setUser(isSignedOutUser);
+       
       })
       .catch((err) => {});
   };
-
+ 
   const handleBlur = (e) => {
     console.log("name", e.target.name);
     // console.log(event.target.value);
@@ -143,6 +156,7 @@ function Login() {
         .signInWithEmailAndPassword(user.email, user.password)
         .then((res) => {
           // Signed in
+         
           const newUserInfo = { ...user };
           newUserInfo.error = "";
           newUserInfo.success = true;

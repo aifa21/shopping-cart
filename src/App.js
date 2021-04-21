@@ -26,7 +26,7 @@ import Home from "./Components/Home/Home";
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-
+ 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
@@ -48,9 +48,7 @@ function App() {
           <PrivateRoute path="/inventory">
             <Inventory></Inventory>
           </PrivateRoute>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
+         
 
           <PrivateRoute path="/shipment">
             <Shipment></Shipment>
@@ -60,6 +58,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Footer></Footer>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
           </Route>
           <Route path="*">
             <NotFound></NotFound>
